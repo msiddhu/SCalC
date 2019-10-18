@@ -1,12 +1,10 @@
 package siddhu.projects.androidcalculator;
 
 
-import android.graphics.Color;
-import android.graphics.PorterDuff;
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -14,7 +12,7 @@ import android.widget.Toast;
 
 import java.math.BigDecimal;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnTouchListener
+public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
   int openParenthesis = 0;
   public Problem eval;
@@ -53,7 +51,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         initializeViewVariables();
         setOnClickListeners();
-        setOnTouchListener();
         eval=new Problem();
     }
 
@@ -84,50 +81,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void setOnClickListeners()
     {
-        buttonNumber0.setOnClickListener(this);
-        buttonNumber1.setOnClickListener(this);
-        buttonNumber2.setOnClickListener(this);
-        buttonNumber3.setOnClickListener(this);
-        buttonNumber4.setOnClickListener(this);
-        buttonNumber5.setOnClickListener(this);
-        buttonNumber6.setOnClickListener(this);
-        buttonNumber7.setOnClickListener(this);
-        buttonNumber8.setOnClickListener(this);
-        buttonNumber9.setOnClickListener(this);
-
-        buttonClear.setOnClickListener(this);
-        buttonParentheses.setOnClickListener(this);
-        buttonPercent.setOnClickListener(this);
-        buttonDivision.setOnClickListener(this);
-        buttonMultiplication.setOnClickListener(this);
-        buttonSubtraction.setOnClickListener(this);
-        buttonAddition.setOnClickListener(this);
-        buttonEqual.setOnClickListener(this);
-        buttonDot.setOnClickListener(this);
+//        buttonNumber0.setOnClickListener(this);
+//        buttonNumber1.setOnClickListener(this);
+//        buttonNumber2.setOnClickListener(this);
+//        buttonNumber3.setOnClickListener(this);
+//        buttonNumber4.setOnClickListener(this);
+//        buttonNumber5.setOnClickListener(this);
+//        buttonNumber6.setOnClickListener(this);
+//        buttonNumber7.setOnClickListener(this);
+//        buttonNumber8.setOnClickListener(this);
+//        buttonNumber9.setOnClickListener(this);
+//
+//        buttonClear.setOnClickListener(this);
+//        buttonParentheses.setOnClickListener(this);
+//        buttonPercent.setOnClickListener(this);
+//        buttonDivision.setOnClickListener(this);
+//        buttonMultiplication.setOnClickListener(this);
+//        buttonSubtraction.setOnClickListener(this);
+//        buttonAddition.setOnClickListener(this);
+//        buttonEqual.setOnClickListener(this);
+//        buttonDot.setOnClickListener(this);
     }
 
-    private void setOnTouchListener()
-    {
-        buttonNumber0.setOnTouchListener(this);
-        buttonNumber1.setOnTouchListener(this);
-        buttonNumber2.setOnTouchListener(this);
-        buttonNumber3.setOnTouchListener(this);
-        buttonNumber4.setOnTouchListener(this);
-        buttonNumber5.setOnTouchListener(this);
-        buttonNumber6.setOnTouchListener(this);
-        buttonNumber7.setOnTouchListener(this);
-        buttonNumber8.setOnTouchListener(this);
-        buttonNumber9.setOnTouchListener(this);
 
-        buttonClear.setOnTouchListener(this);
-        buttonParentheses.setOnTouchListener(this);
-        buttonPercent.setOnTouchListener(this);
-        buttonDivision.setOnTouchListener(this);
-        buttonMultiplication.setOnTouchListener(this);
-        buttonSubtraction.setOnTouchListener(this);
-        buttonAddition.setOnTouchListener(this);
-        buttonDot.setOnTouchListener(this);
-    }
 
     @Override
     public void onClick(View view)
@@ -200,26 +176,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    @Override
-    public boolean onTouch(View view, MotionEvent motionEvent)
-    {
-        switch (motionEvent.getAction())
-        {
-            case MotionEvent.ACTION_DOWN:
-            {
-                view.getBackground().setColorFilter(Color.BLUE, PorterDuff.Mode.SRC_ATOP);
-                view.invalidate();
-                break;
-            }
-            case MotionEvent.ACTION_UP:
-            {
-                view.getBackground().clearColorFilter();
-                view.invalidate();
-                break;
-            }
-        }
-        return false;
-    }
 
     private boolean addDot()
     {

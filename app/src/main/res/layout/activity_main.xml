@@ -36,7 +36,7 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <Button
+        <Button android:onClick="onClick"
             android:id="@+id/button_clear"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -44,43 +44,43 @@
             android:layout_marginTop="0.1dp"
             android:layout_marginEnd="0.1dp"
             android:layout_weight="1"
-            android:background="@color/colorDarkerGrey"
+            android:background="@color/operator"
             android:text="C"
             android:textColor="@color/colorDarkerRed"
             android:textSize="30sp" />
 
-        <Button
+        <Button android:onClick="onClick"
             android:id="@+id/button_parentheses"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="0.1dp"
             android:layout_marginEnd="0.1dp"
             android:layout_weight="1"
-            android:background="@color/colorDarkerGrey"
+            android:background="@color/operator"
             android:text="( )"
             android:textColor="@color/colorDarkerRed"
             android:textSize="30sp" />
 
-        <Button
+        <Button android:onClick="onClick"
             android:id="@+id/button_percent"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="0.1dp"
             android:layout_marginEnd="0.1dp"
             android:layout_weight="1"
-            android:background="@color/colorDarkerGrey"
+            android:background="@color/operator"
             android:text="%"
             android:textColor="@color/colorDarkerRed"
             android:textSize="30sp" />
 
-        <Button
+        <Button android:onClick="onClick"
             android:id="@+id/button_division"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="0.1dp"
             android:layout_marginEnd="0.1dp"
             android:layout_weight="1"
-            android:background="@color/colorDarkerGrey"
+            android:background="@color/operator"
             android:text="\u00F7"
             android:textColor="@color/colorDarkerRed"
             android:textSize="40sp" />
@@ -92,7 +92,7 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <Button
+        <Button android:onClick="onClick"
             android:id="@+id/button_seven"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -100,43 +100,43 @@
             android:layout_marginTop="0.1dp"
             android:layout_marginEnd="0.1dp"
             android:layout_weight="1"
-            android:background="@color/colorLighterGrey"
+            android:background="@color/digit"
             android:text="7"
             android:textColor="?attr/colorButtonNormal"
             android:textSize="30sp" />
 
-        <Button
+        <Button android:onClick="onClick"
             android:id="@+id/button_eight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="0.1dp"
             android:layout_marginEnd="0.1dp"
             android:layout_weight="1"
-            android:background="@color/colorLighterGrey"
+            android:background="@color/digit"
             android:text="8"
             android:textColor="?attr/colorButtonNormal"
             android:textSize="30sp" />
 
-        <Button
+        <Button android:onClick="onClick"
             android:id="@+id/button_nine"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="0.1dp"
             android:layout_marginEnd="0.1dp"
             android:layout_weight="1"
-            android:background="@color/colorLighterGrey"
+            android:background="@color/digit"
             android:text="9"
             android:textColor="?attr/colorButtonNormal"
             android:textSize="30sp" />
 
-        <Button
+        <Button android:onClick="onClick"
             android:id="@+id/button_multiplication"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="0.1dp"
             android:layout_marginEnd="0.1dp"
             android:layout_weight="1"
-            android:background="@color/colorDarkerGrey"
+            android:background="@color/operator"
             android:text="x"
             android:textColor="@color/colorDarkerRed"
             android:textSize="30sp" />
@@ -148,7 +148,7 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <Button
+        <Button android:onClick="onClick"
             android:id="@+id/button_four"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -156,43 +156,43 @@
             android:layout_marginTop="0.1dp"
             android:layout_marginEnd="0.1dp"
             android:layout_weight="1"
-            android:background="@color/colorLighterGrey"
+            android:background="@color/digit"
             android:text="4"
             android:textColor="?attr/colorButtonNormal"
             android:textSize="30sp" />
 
-        <Button
+        <Button android:onClick="onClick"
             android:id="@+id/button_five"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="0.1dp"
             android:layout_marginEnd="0.1dp"
             android:layout_weight="1"
-            android:background="@color/colorLighterGrey"
+            android:background="@color/digit"
             android:text="5"
             android:textColor="?attr/colorButtonNormal"
             android:textSize="30sp" />
 
-        <Button
+        <Button android:onClick="onClick"
             android:id="@+id/button_six"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="0.1dp"
             android:layout_marginEnd="0.1dp"
             android:layout_weight="1"
-            android:background="@color/colorLighterGrey"
+            android:background="@color/digit"
             android:text="6"
             android:textColor="?attr/colorButtonNormal"
             android:textSize="30sp" />
 
-        <Button
+        <Button android:onClick="onClick"
             android:id="@+id/button_subtraction"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="0.1dp"
             android:layout_marginEnd="0.1dp"
             android:layout_weight="1"
-            android:background="@color/colorDarkerGrey"
+            android:background="@color/operator"
             android:text="-"
             android:textColor="@color/colorDarkerRed"
             android:textSize="40sp" />
@@ -204,7 +204,7 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <Button
+        <Button android:onClick="onClick"
             android:id="@+id/button_one"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -212,43 +212,43 @@
             android:layout_marginTop="0.1dp"
             android:layout_marginEnd="0.1dp"
             android:layout_weight="1"
-            android:background="@color/colorLighterGrey"
+            android:background="@color/digit"
             android:text="1"
             android:textColor="?attr/colorButtonNormal"
             android:textSize="30sp" />
 
-        <Button
+        <Button android:onClick="onClick"
             android:id="@+id/button_two"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="0.1dp"
             android:layout_marginEnd="0.1dp"
             android:layout_weight="1"
-            android:background="@color/colorLighterGrey"
+            android:background="@color/digit"
             android:text="2"
             android:textColor="?attr/colorButtonNormal"
             android:textSize="30sp" />
 
-        <Button
+        <Button android:onClick="onClick"
             android:id="@+id/button_three"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="0.1dp"
             android:layout_marginEnd="0.1dp"
             android:layout_weight="1"
-            android:background="@color/colorLighterGrey"
+            android:background="@color/digit"
             android:text="3"
             android:textColor="?attr/colorButtonNormal"
             android:textSize="30sp" />
 
-        <Button
+        <Button android:onClick="onClick"
             android:id="@+id/button_addition"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="0.1dp"
             android:layout_marginEnd="0.1dp"
             android:layout_weight="1"
-            android:background="@color/colorDarkerGrey"
+            android:background="@color/operator"
             android:text="+"
             android:textColor="@color/colorDarkerRed"
             android:textSize="40sp" />
@@ -260,7 +260,7 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <Button
+        <Button android:onClick="onClick"
             android:id="@+id/button_zero"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -269,12 +269,12 @@
             android:layout_marginEnd="0.1dp"
             android:layout_marginBottom="0.1dp"
             android:layout_weight="2"
-            android:background="@color/colorLighterGrey"
+            android:background="@color/digit"
             android:text="0"
             android:textColor="?attr/colorButtonNormal"
             android:textSize="60sp" />
 
-        <Button
+        <Button android:onClick="onClick"
             android:id="@+id/button_dot"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -282,12 +282,12 @@
             android:layout_marginEnd="0.1dp"
             android:layout_marginBottom="0.1dp"
             android:layout_weight="1"
-            android:background="@color/colorLighterGrey"
+            android:background="@color/digit"
             android:text="."
             android:textColor="?attr/colorButtonNormal"
             android:textSize="30sp" />
 
-        <Button
+        <Button android:onClick="onClick"
             android:id="@+id/button_equal"
             android:layout_width="0dp"
             android:layout_height="match_parent"
