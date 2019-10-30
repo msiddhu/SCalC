@@ -1,3 +1,3 @@
 # SCalC
 A basic calculator native android applicatioin.
-//COMMITED BY SAI CHARAN
+Also include parenthesis calculations.
