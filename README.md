@@ -2,4 +2,4 @@
 A basic calculator native android applicatioin.
 BigInteger is also compatable
 
-![Thumbnail](sCalc photo.png)
+![Thumbnail](sCalc photo.jpg)
