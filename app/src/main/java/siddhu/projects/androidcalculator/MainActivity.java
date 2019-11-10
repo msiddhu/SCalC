@@ -17,7 +17,7 @@ import java.math.BigDecimal;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnTouchListener
 {
   int openParenthesis = 0;
-  public Problem eval;
+  public Calculate eval;
   boolean dotUsed = false;
 
   boolean equalClicked = false;
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initializeViewVariables();
         setOnClickListeners();
         setOnTouchListener();
-        eval=new Problem();
+        eval=new Calculate();
     }
 
     private void initializeViewVariables()
@@ -193,7 +193,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 equalClicked = false;
                 break;
             case R.id.button_equal:
-                if (InputNumbers.getText().toString() != null && !InputNumbers.getText().toString().equals(""))
+                InputNumbers.getText();
+                if (!InputNumbers.getText().toString().equals(""))
                     calculate(InputNumbers.getText().toString());
                 break;
         }
@@ -230,7 +231,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             InputNumbers.setText("0.");
             dotUsed = true;
             done = true;
-        } else if (dotUsed == true)
+        } else if (dotUsed)
         {
         } else if (defineLastCharacter(InputNumbers.getText().charAt(InputNumbers.getText().length() - 1) + "") == IS_OPERAND)
         {
@@ -379,9 +380,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String input=input1.replace("x","*").replace("\u00F7","/");
         Log.v("calculate",input);
         String result = "";
-        try
-        {
+        try {
+
             String temp = input;
+            Log.v("Before result-1",input);
             if (equalClicked)
             {
                 temp = input + lastExpression;
@@ -390,15 +392,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 saveLastExpression(input);
             }
 
-            result=eval.calcTheResult(input);
+            Log.v("Before result-2",input);
             //result = scriptEngine.eval(temp.replaceAll("%", "/100").replaceAll("x", "*").replaceAll("[^\\x00-\\x7F]", "/")).toString();
-            BigDecimal decimal = new BigDecimal(result);
+            input.replaceAll("%", "/100").replaceAll("x", "*").replaceAll("[^\\x00-\\x7F]", "/");
+            Log.v("Before result-3",input);
+            eval.setExpression(input);
+            BigDecimal decimal = eval.getResult();
             Log.v("Result",result);
             result = decimal.setScale(8, BigDecimal.ROUND_HALF_UP).toPlainString();
             equalClicked = true;
 
         } catch (Exception e)
         {
+            Log.v("Exception","occured");
             Toast.makeText(getApplicationContext(), "Wrong Format", Toast.LENGTH_SHORT).show();
             return;
         }
