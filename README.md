@@ -1,5 +1,5 @@
 ### SCalC
 # A basic calculator native android applicatioin.
-BigInteger is also compatble
+BigInteger is also compatable
 
 ![Thumbnail](thumbnail.jpg)
